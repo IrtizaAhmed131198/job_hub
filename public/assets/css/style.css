@@ -1,0 +1,97 @@
+.dashboard-tabs {
+    padding: 50px 0;
+}
+
+.side-table .btn-default {
+    margin: 0 !important;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.side-table ul li {
+    padding-bottom: 15px;
+}
+
+.maintable h3 {
+    font-size: 50px;
+    font-weight: 800;
+    color: #1f2938;
+    margin-bottom: 10px;
+}
+
+.maintable p {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 25px;
+    color: black;
+}
+
+.maintable table {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.maintable table tr th {
+    padding: 10px 10px;
+    border: 1px solid black;
+}
+
+.maintable table tr {
+    border: 1px solid black;
+}
+
+.maintable table tr th:nth-child(1) {
+    width: 5%;
+}
+
+.maintable table tr th {
+    width: 30%;
+    text-align: center;
+    background: #9777fa;
+    color: white;
+}
+
+.maintable table tr td {
+    padding: 10px 10px;
+    border: 1px solid black;
+    text-align: center;
+    font-weight: 700;
+    color: black;
+}
+
+.maintable table tr td:nth-child(1) {
+    background: #9777fa;
+    color: white;
+}
+
+.gender {
+    border: 1px solid #ececec;
+    border-radius: 10px;
+    height: 50px;
+    box-shadow: none;
+    padding-left: 20px;
+    font-size: 16px;
+    width: 100%;
+    background: #ffffff;
+}
+
+.jobClass {
+    position: absolute;
+    z-index: 1;
+    right: 9px;
+    top: 11px;
+    background: #fdfdfd;
+    padding: 4px;
+    border-radius: 5px;
+}
+
+.jobClass span {
+    color: #9c76f8;
+    font-weight: 800;
+    font-size: 17px;
+    font-family: 'Montserrat';
+}

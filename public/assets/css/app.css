@@ -1,0 +1,37 @@
+/* Pagination styles */
+.pager {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pager li {
+    margin: 0 5px;
+}
+
+.pager a,
+.pager span {
+    display: block;
+    padding: 8px 12px;
+    text-decoration: none;
+    color: #333;
+    font-weight: normal;
+}
+
+.pager a:hover {
+    color: #007bff; /* Change to your desired hover color */
+    font-weight: bold;
+}
+
+.pager .active {
+    font-weight: bold;
+    color: #007bff; /* Change to your desired active color */
+    cursor: default;
+}
+
+.pager .disabled {
+    pointer-events: none;
+    color: #999;
+}
