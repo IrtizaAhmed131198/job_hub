@@ -76,6 +76,9 @@
         toastr.error("{{ session('error') }}", 'Error');
     @endif
 
+    const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+    console.log('The current time zone is:', timeZone);
+
 </script>
 </body>
 

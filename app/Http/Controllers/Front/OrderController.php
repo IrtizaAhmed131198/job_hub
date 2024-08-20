@@ -31,12 +31,16 @@ class OrderController extends Controller
         if ($price == '2.95' || $price == '5.95' || $price == '9.95') {
             if($price == '2.95'){
                 $sub_type = 'Standard';
+                $price = 23.95;
             }else if($price == '5.95'){
                 $sub_type = 'Premium';
+                $price = 71.40;
             }else if($price == '9.95'){
                 $sub_type = 'Enterprise';
+                $price = 29.95;
             }else{
                 $sub_type = 'Standard';
+                $price = 23.95;
             }
             return view('front.auth.payment', compact('price', 'sub_type'));
         } else {
@@ -98,11 +102,15 @@ class OrderController extends Controller
         $order->total_amount = $request->input('price');
         $order->status = $paymentStatus === 'succeeded' ? 'completed' : 'failed';
         $order->payment_method = $request->input('payment_method');
-        $order->payment_status = $paymentStatus === 'succeeded' ? 'Completed' : 'Failed';
+        $order->payment_status = $paymentStatus === 'succeeded' ? 'paid' : 'unpaid';
         $order->subscription_box = $request->input('subscription_box');
-        $order->save();
 
-        // Send a confirmation email or perform any other actions here
+		do {
+            $orderNumber = rand(0, 999999999999999);
+            $exists = Order::where('order_number', $orderNumber)->exists();
+        } while ($exists);
+
+        $order->save();
 
         return redirect()->back()->with('success', 'Subscription Successfully Purchased.');
     }
